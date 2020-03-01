@@ -17,7 +17,6 @@ function CoSymForm(props, companies) {
             searchtype={props.searchtype}
             name="search"
             type="text"
-            companies="text"
             className="form-control"
             placeholder="Search Symbols"
             id="search"

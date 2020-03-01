@@ -23,7 +23,9 @@ class Create extends Component {
       short_description: '',
       earnings_date: '',
       high: null,
-      low: null
+      low: null,
+      stock_status: '',
+      meter_percentage: ''
     };
   }
   onChange = (e) => {

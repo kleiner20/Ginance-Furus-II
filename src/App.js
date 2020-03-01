@@ -18,8 +18,36 @@ class App extends Component {
         this.setState({ stocks: res.data });
         console.log(this.state.stocks);
       });
-  }
+  };
 
+  // addColorToMeter(){
+  //   let status = ({this.state.close}-{state.low})/(Number{this.state.high}))-(Number(state.low));
+  //   if (status < "50%") {
+  //     let meter_color = "progress-bar progress-bar-danger"
+  //     let size = "width:" + status
+  //     this.setState({stock_status: meter_color})
+  //     this.setState({meter_percentage: size})
+  //   }
+  //   if (status >"50%" && status < "75%"){
+  //     let meter_color = "progress-bar progress-bar-warning"
+  //     let size = "width:" + status
+  //     this.setState({stock_status: meter_color})
+  //     this.setState({meter_percentage: size})
+  //   }
+  //   if (status  >"75%"){
+  //     let meter_color = "progress-bar progress-bar-success"
+  //     let size = "width:" + status
+  //     this.setState({stock_status: meter_color})
+  //     this.setState({meter_percentage: size})
+  //   // }
+  //   // else{
+  //   //   // we're adding more numbers
+  //   //   let newEquation = equation + newLogic
+  //   //   this.setState({equation: newEquation})
+  //   }
+  
+  // };
+  
   render() {
     return (
       <div class="container">
@@ -43,9 +71,17 @@ class App extends Component {
                 {this.state.stocks.map(stocks =>
                   <tr>
                     <td><Link to={`/show/${stocks._id}`}>{stocks.ticker}</Link></td>
-                    <td>Low: ${stocks.low}
-                        Close ${stocks.close}
-                        High ${stocks.high}
+
+                    <td>
+                      Low: ${stocks.low}<br></br>
+                        Close ${stocks.close}<br></br>
+                        High ${stocks.high}<br></br>
+  {/* <div class="progress">
+    <div class={this.state.stock_status} role="progressbar" aria-valuenow={stocks.close} aria-valuemin={stocks.low} aria-valuemax={stocks.high} style={this.state.meter_percentage}>
+      ${stocks.close}
+    </div></div> */}
+
+
                     </td>
                     <td>{stocks.investors_notes}</td>
                   </tr>
