@@ -61,6 +61,10 @@ class Edit extends Component {
                 <input type="text" class="form-control" name="close" value={this.state.stocks.close} onChange={this.onChange} placeholder="close" />
               </div>
               <div class="form-group">
+                <label for="investors_notes">Investors Notes:</label>
+                <input type="text" class="form-control" name="investors_notes" value={this.state.stocks.investors_notes} onChange={this.onChange} placeholder="investors_notes" />
+              </div>
+              <div class="form-group">
                 <label for="short_description">Description:</label>
                 <input type="text" class="form-control" name="short_description" value={this.state.stocks.short_description} onChange={this.onChange} placeholder="short_description" />
               </div>

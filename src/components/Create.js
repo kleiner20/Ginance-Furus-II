@@ -2,19 +2,26 @@ import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+// import API from "../utils/API";
 
 class Create extends Component {
 
   constructor() {
     super();
     this.state = {
+      result: [],
+      search: '',
+      searchtype: 'Company',
+      companies: '',
+      error: '',
       ticker: '',
       name: '',
-      close: '',
-      short_short_description: '',
+      close: null,
+      investors_notes: '',
+      short_description: '',
       earnings_date: '',
-      high: '',
-      low: ''
+      high: null,
+      low: null
     };
   }
   onChange = (e) => {
@@ -26,16 +33,28 @@ class Create extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { ticker, name, close, short_description, earnings_date, high, low } = this.state;
+    const { ticker, name, close, investors_notes,short_description, earnings_date, high, low } = this.state;
 
-    axios.post('/api/stocks', { ticker, name, close, short_description, earnings_date, high, low })
+    axios.post('/api/stocks', { ticker, name, close, investors_notes, short_description, earnings_date, high, low })
       .then((result) => {
         this.props.history.push("/")
       });
   }
+  // searchSymbols = () => {
+  //   const searchQuery = this.state.search.trim();
+  //   const searchResults = Companies.filter((emp) => emp.company === searchQuery);
+  //   this.setState({ 'result': searchResults, 'searchtype': 'Company' });
+
+  // };
+
+
+
+
+
+
 
   render() {
-    const { ticker, name, close, short_description, earnings_date, high, low } = this.state;
+    const { ticker, name, close, investors_notes,short_description, earnings_date, high, low } = this.state;
     return (
       <div class="container">
         <div class="panel panel-default">
@@ -58,6 +77,10 @@ class Create extends Component {
               <div class="form-group">
                 <label for="close">close:</label>
                 <input type="text" class="form-control" name="close" value={close} onChange={this.onChange} placeholder="close" />
+              </div>
+              <div class="form-group">
+                <label for="investors_notes">Investors Notes:</label>
+                <textArea class="form-control" name="investors_notes" onChange={this.onChange} placeholder="investors_notes" cols="80" rows="3">{investors_notes}</textArea>
               </div>
               <div class="form-group">
                 <label for="short_description">short_description:</label>

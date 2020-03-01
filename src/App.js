@@ -44,7 +44,7 @@ class App extends Component {
                   <tr>
                     <td><Link to={`/show/${stocks._id}`}>{stocks.ticker}</Link></td>
                     <td>{stocks.title}</td>
-                    <td>{stocks.author}</td>
+                    <td>{stocks.investors_notes}</td>
                   </tr>
                 )}
               </tbody>
