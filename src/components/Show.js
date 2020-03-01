@@ -43,6 +43,8 @@ class Show extends Component {
               <dd>{this.state.stocks.ticker}</dd>
               <dt>Name:</dt>
               <dd>{this.state.stocks.name}</dd>
+              <dt>Investors Notes:</dt>
+              <dd>{this.state.stocks.investors_notes}</dd>
               <dt>Description:</dt>
               <dd>{this.state.stocks.short_description}</dd>
               <dt>Earnings Date:</dt>
