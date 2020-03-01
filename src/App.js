@@ -43,7 +43,10 @@ class App extends Component {
                 {this.state.stocks.map(stocks =>
                   <tr>
                     <td><Link to={`/show/${stocks._id}`}>{stocks.ticker}</Link></td>
-                    <td>{stocks.title}</td>
+                    <td>Low: ${stocks.low}
+                        Close ${stocks.close}
+                        High ${stocks.high}
+                    </td>
                     <td>{stocks.investors_notes}</td>
                   </tr>
                 )}
