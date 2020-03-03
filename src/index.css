@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  font-size: 1.5em;
   background-color: #427a42
   ;
   font-family: 'Spartan', ;
@@ -21,9 +22,14 @@ a:hover{
 .panel-title{
   text-align: center;
   padding:30px;
+  font-size:4em;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.navbar-brand{
+  font-size:1.5em;
 }
