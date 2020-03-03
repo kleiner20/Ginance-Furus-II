@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
+import Heading from './components/Heading.js';
+import Jumbotron from './components/Jumbotron.js';
 import axios from 'axios';
 
 class App extends Component {
@@ -50,12 +52,14 @@ class App extends Component {
   
   render() {
     return (
+      <div>
+        <Heading />
       <div class="container">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h1 class="panel-title">
-              Ginance Furu Portfolio
-            </h1>
+            <h3 class="panel-title">
+              My Portfolio
+            </h3>
           </div>
           <div class="panel-body">
             <h4><Link to="/create"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Stock</Link></h4>
@@ -90,6 +94,7 @@ class App extends Component {
             </table>
           </div>
         </div>
+      </div>
       </div>
     );
   }
