@@ -10,7 +10,6 @@ body {
 }
 
 a{
-  color: white;
   text-decoration: none;
 }
 
@@ -20,7 +19,6 @@ a:hover{
 }
 
 .panel-title{
-  color: white;
   text-align: center;
   padding:30px;
 }
