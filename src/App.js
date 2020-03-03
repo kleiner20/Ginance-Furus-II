@@ -16,10 +16,19 @@ class App extends Component {
 
   componentDidMount() {
     axios.get('/api/stocks')
-      .then(res => {
-        this.setState({ stocks: res.data });
-        console.log(this.state.stocks);
-      });
+    .then(res => {
+      this.setState({ stocks: res.data });
+      console.log(this.state.stocks);
+      console.log("butt");
+    });
+      setInterval(()=>{
+        axios.get('/api/stocks')
+        .then(res => {
+          this.setState({ stocks: res.data });
+          console.log(this.state.stocks);
+          console.log("butt");
+        });
+      }, 30000);
   };
 
   // addColorToMeter(){
