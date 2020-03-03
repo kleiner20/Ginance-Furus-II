@@ -28,7 +28,7 @@ class App extends Component {
           console.log(this.state.stocks);
           console.log("butt");
         });
-      }, 30000);
+      }, 3600000);
   };
 
   // addColorToMeter(){
