@@ -86,13 +86,13 @@ class App extends Component {
                     <td><Link to={`/show/${stocks._id}`}>{stocks.ticker}</Link></td>
 
                     <td>
-                      Low: ${stocks.low}<br></br>
+                      {/* Low: ${stocks.low}<br></br>
                         Close ${stocks.close}<br></br>
-                        High ${stocks.high}<br></br>
-  {/* <div class="progress">
+                        High ${stocks.high}<br></br> */}
+  <div class="progress">
     <div class={this.state.stock_status} role="progressbar" aria-valuenow={stocks.close} aria-valuemin={stocks.low} aria-valuemax={stocks.high} style={this.state.meter_percentage}>
       ${stocks.close}
-    </div></div> */}
+    </div></div>
 
 
                     </td>

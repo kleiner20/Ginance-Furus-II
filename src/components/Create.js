@@ -202,10 +202,10 @@ console.log("company search 2")
               handleSymbolFormSubmit={this.handleSymbolFormSubmit}
               searchJobs={this.searchJobs}
             />
-              <div class="form-group">
+              {/* <div class="form-group">
                 <label for="ticker">ticker:</label>
                 <input type="text" class="form-control" name="ticker" value={ticker} onChange={this.onChange} placeholder="ticker" />
-              </div>
+              </div> */}
               <div class="form-group">
                 <label for="name">name:</label>
                 <input type="text" class="form-control" name="name" value={name} onChange={this.onChange} placeholder="name" />

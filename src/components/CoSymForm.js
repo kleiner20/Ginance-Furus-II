@@ -12,7 +12,7 @@ function CoSymForm(props, companies) {
         <div className="form-group" style={{ padding: '22px' }}>
           <label htmlFor="search">Company Symbol</label>
           <input
-            onChange={props.comhandleSymbolInputChange}
+            onChange={props.handleSymbolInputChange}
             value={props.value}
             searchtype={props.searchtype}
             name="search"
