@@ -148,6 +148,10 @@ console.log("company search 2")
       console.log(keysArr)
       console.log(keysArr.length)
 
+      const monthArray = Object.keys(monthsObject).map(i => monthsObject[i])
+      console.log("marray")
+      console.log(monthArray)
+
       let high = 0;
       let low = 99999999;
       keysArr.forEach(date=>{
