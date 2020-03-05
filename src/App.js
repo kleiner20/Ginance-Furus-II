@@ -27,7 +27,7 @@ class App extends Component {
           this.setState({ stocks: res.data });
           console.log("Reloaded API");
         });
-      }, 3600000);
+      }, 3000);
   };
 
   // addColorToMeter(){
@@ -61,7 +61,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Heading />
+        {/* <Heading /> */}
       <div class="container">
         <div class="panel panel-default">
           <div class="panel-heading">

@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'domoaregatonormal';
+  src: url('samuraiFont/domoaregatonormal-q2jr-webfont.woff2') format('woff2'),
+       url('samuraiFont/domoaregatonormal-q2jr-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+.login-form {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  height: 100%;
+  /* float:right; */
+}
+
+#root{
+  background-color: #004e17;
+  color: white;
+}
+
+h1{
+  float:left;
+  font-size: 67em;
+  padding:14px;
+}
+
+form input {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  margin: 10px;
+}
+
+Button{
+  color: red;
+}
