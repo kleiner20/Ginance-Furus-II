@@ -25,8 +25,7 @@ class App extends Component {
         axios.get('/api/stocks')
         .then(res => {
           this.setState({ stocks: res.data });
-          console.log(this.state.stocks);
-          console.log("butt");
+          console.log("Reloaded API");
         });
       }, 3000);
   };
