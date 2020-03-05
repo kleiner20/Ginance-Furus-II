@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'domoaregatonormal';
+    src: url('../samuraiFont/domoaregatonormal-q2jr-webfont.woff2') format('woff2'),
+         url('../samuraiFont/domoaregatonormal-q2jr-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+
 .floatLeft { width: 50%; float: left; }
 .floatRight {width: 50%; float: right; }
 .container { overflow: hidden; }
@@ -22,4 +31,13 @@ ul {
     float:right;
     margin-left:400px;
     width:500px;
+}
+
+h3{
+    font-family: 'domoaregatonormal';
+
+}
+
+h3.panel-title{
+    font-size: 8em;
 }
