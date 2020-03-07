@@ -11,6 +11,7 @@ mongoose.connect('mongodb://localhost/mern-crud', { promiseLibrary: require('blu
 
 var stocks = require('./routes/stocks');
 var app = express();
+const PORT = process.env.PORT || 3001;
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -37,4 +38,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.listen(PORT, function(){
+  console.log(`API server is now listening on PORT ${PORT}`)
+})
 module.exports = app;
