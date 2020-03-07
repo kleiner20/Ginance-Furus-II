@@ -10,7 +10,12 @@ export default {
     return axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=${symbol}&apikey=OmE3MWIyM2I4Y2E4ZTg1YTU1NTdmZjlmZDllNmJlNzdh`)
   },
   getCompanySymbols: function(companyName){
-    return axios.get(`https://api-v2.intrinio.com/companies/search?query=${companyName}&api_key=OmFmZTU0MmEwMGNkMWQ3MDU5ZGZlMzhjOGNlZjAyYzU4`)
+    return axios.get(`https://api-v2.intrinio.com/companies/${companyName}&api_key=OmFmZTU0MmEwMGNkMWQ3MDU5ZGZlMzhjOGNlZjAyYzU4`)
+  },
+  getSecuritiePrices: function(symbol){
+    return axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=OmE3MWIyM2I4Y2E4ZTg1YTU1NTdmZjlmZDllNmJlNzdh`)
   }
   };
+
+
 

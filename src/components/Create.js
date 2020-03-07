@@ -91,8 +91,9 @@ class Create extends Component {
   // When the form is submitted, search the companies.json for the value of `this.state.search`
   handleSymbolFormSubmit = event => {
     event.preventDefault();
-    console.log("Keith's tracking 2")
+    console.log("Keith's tracking 2 weeee")
     this.stockPriceSearch(this.state.ticker)
+    this.companySearch(this.state.ticker)
     // .then(res =>{
     //   console.log(res.data)
     //   //let companies=res.data.companies
@@ -112,12 +113,15 @@ class Create extends Component {
     console.log("Get Co. Symbols")
   };
 
-companySearch = (event)=>{
-  API.getCompanySymbols("Apple Inc")
+companySearch = (symbol)=>{
+  console.log("lion")
+  API.getCompanySymbols(symbol)
   .then(res =>{
     //let companies=res.data.companies
     //console.log(res.data.companies.map(companies=> companies.ticker )))
-    this.setState({companies: res.data.companies })
+    // this.setState({companies: res.data.companies })
+    console.log("RIChard")
+    console.log(res.data)
 })
 console.log("company search 2")
 }
