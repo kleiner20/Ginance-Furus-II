@@ -6,10 +6,10 @@
     font-style: normal;
   
   }
-
+/* 
 .floatLeft { width: 50%; float: left; }
 .floatRight {width: 50%; float: right; }
-.container { overflow: hidden; }
+.container { overflow: hidden; } */
 
 .rowC{display:flex; flex-direction:row;}
 
