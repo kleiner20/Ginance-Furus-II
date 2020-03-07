@@ -4,7 +4,7 @@ function Jumbotron(props){
   return(
     <Jumbotron fluid>
 
-      <h1>My Portfolio</h1>
+      <h1>Ginance Furus</h1>
       <p>
         View and monitor my investments
       </p>
