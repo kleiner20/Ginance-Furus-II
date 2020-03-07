@@ -1,0 +1,25 @@
+.floatLeft { width: 50%; float: left; }
+.floatRight {width: 50%; float: right; }
+.container { overflow: hidden; }
+
+.rowC{display:flex; flex-direction:row;}
+
+form {
+    display: inline-block; 
+}
+
+ul {
+    list-style-type:none;
+    /* width:100%; */
+}
+
+.symbol{
+    float:right;
+}
+
+
+.results{
+    float:right;
+    margin-left:400px;
+    width:500px;
+}
