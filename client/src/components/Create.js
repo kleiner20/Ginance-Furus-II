@@ -239,11 +239,11 @@ console.log("company search 2")
               </div>
               <div class="form-group">
                 <label for="investors_notes">Investors Notes:</label>
-                <textArea class="form-control" name="investors_notes" onChange={this.onChange} placeholder="investors_notes" cols="80" rows="3">{investors_notes}</textArea>
+                <textArea class="form-control" name="investors_notes" onChange={this.onChange} placeholder="Sell when..." cols="80" rows="3">{investors_notes}</textArea>
               </div>
               <div class="form-group">
-                <label for="short_description">short_description:</label>
-                <textArea class="form-control" name="short_description" onChange={this.onChange} placeholder="short_description" cols="80" rows="3">{short_description}</textArea>
+                <label for="short_description">Short Description:</label>
+                <textArea class="form-control" name="short_description" onChange={this.onChange} placeholder="Short Description" cols="80" rows="3">{short_description}</textArea>
               </div>
               <div class="form-group">
                 <label for="earnings_date">Earnings Date:</label>

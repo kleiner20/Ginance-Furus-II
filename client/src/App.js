@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
+// import ZingChart from 'zingchart-react';
 // import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import Heading from './components/Heading.js';
-import Jumbotron from './components/Jumbotron.js';
+// import Jumbotron from './components/Jumbotron.js';
 import axios from 'axios';
+import Chart from './components/Chart.js';
+// import TableRow from './components/TableRow.js';
+
 
 class App extends Component {
+
 
   constructor(props) {
     super(props);
     this.state = {
-      stocks: []
-    };
+      stocks: [],
+      progress: 0,
+      meter_color: '',
+      meter_progress: '',
+      meter_value: ''
+}
+    this.addColorToMeter = this.addColorToMeter.bind(this)
   }
+
 
   componentDidMount() {
     axios.get('/api/stocks')
@@ -30,34 +41,29 @@ class App extends Component {
       }, 3600000);
   };
 
-  // addColorToMeter(){
-  //   let status = ({this.state.close}-{state.low})/(Number{this.state.high}))-(Number(state.low));
-  //   if (status < "50%") {
-  //     let meter_color = "progress-bar progress-bar-danger"
-  //     let size = "width:" + status
-  //     this.setState({stock_status: meter_color})
-  //     this.setState({meter_percentage: size})
-  //   }
-  //   if (status >"50%" && status < "75%"){
-  //     let meter_color = "progress-bar progress-bar-warning"
-  //     let size = "width:" + status
-  //     this.setState({stock_status: meter_color})
-  //     this.setState({meter_percentage: size})
-  //   }
-  //   if (status  >"75%"){
-  //     let meter_color = "progress-bar progress-bar-success"
-  //     let size = "width:" + status
-  //     this.setState({stock_status: meter_color})
-  //     this.setState({meter_percentage: size})
-  //   // }
-  //   // else{
-  //   //   // we're adding more numbers
-  //   //   let newEquation = equation + newLogic
-  //   //   this.setState({equation: newEquation})
-  //   }
-  
-  // };
-  
+  addColorToMeter(low, close, high){
+    let status = (close - low)/(high - low);
+    console.log(status)
+    if (status < 0.50) {
+      let size = (status * 100).toString() + "%"
+      this.setState({meter_progress: size})
+      this.setState({meter_value: (status * 100)})
+      this.setState({meter_color: "progress-bar progress-bar-danger"})
+    }
+    if (status > 0.50 && status < .75){
+      let size = (status * 100).toString() + "%"
+      this.setState({meter_progress: size})
+      this.setState({meter_value: (status * 100)})
+      this.setState({meter_color: "progress-bar progress-bar-warning"})
+    }
+    if (status  > 0.75){
+      let size = (status * 100).toString() + "%"
+      this.setState({meter_progress: size})
+      this.setState({meter_value: (status * 100)})
+      this.setState({meter_color: "progress-bar progress-bar-success"})
+    } 
+  };
+
   render() {
     return (
       <div>
@@ -77,6 +83,7 @@ class App extends Component {
                   <th>Ticker</th>
                   <th>Buy/Sell Meter</th>
                   <th>Chart</th>
+                  <th>Notes 2</th>
                 </tr>
               </thead>
               <tbody>
@@ -84,18 +91,34 @@ class App extends Component {
                   <tr>
                     <td><Link to={`/show/${stocks._id}`}>{stocks.ticker}</Link></td>
 
+{/* <TableRow stocks={stocks} /> */}
                     <td>
                       {/* Low: ${stocks.low}<br></br>
                         Close ${stocks.close}<br></br>
                         High ${stocks.high}<br></br> */}
   <div class="progress">
-    <div class={this.state.stock_status} role="progressbar" aria-valuenow={stocks.close} aria-valuemin={stocks.low} aria-valuemax={stocks.high} style={this.state.meter_percentage}>
+  <div class={this.state.meter_color} role="progressbar" aria-valuenow={this.state.meter_value} aria-valuemin="0" aria-valuemax="100" style={{width: this.state.meter_progress}}>
       ${stocks.close}
     </div></div>
 
 
+
+
+    {/* <div class="progress">
+    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style={{width: "40%"}}>
+      40% Complete (success)
+    </div>
+  </div> */}
+
+
+
+<div>{stocks.investors_notes}</div>
+    <button onClick={() => console.log(this.state)} >Color button</button>
+    <button onClick={() => this.addColorToMeter(stocks.low, stocks.close, stocks.high)} > KFC</button>
+
                     </td>
-                    <td>{stocks.investors_notes}</td>
+                    <td><div><Chart /></div></td>
+      <td>{stocks.investors_notes}</td>
                   </tr>
                 )}
               </tbody>
@@ -107,5 +130,6 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;

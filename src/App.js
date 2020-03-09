@@ -149,11 +149,11 @@ class App extends Component {
     </div></div>
 
 
-    <div class="progress">
+    {/* <div class="progress">
     <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style={{width: "40%"}}>
       40% Complete (success)
     </div>
-  </div>
+  </div> */}
 
 
     <button onClick={() => console.log(this.state)} >Color button</button>
@@ -162,6 +162,7 @@ class App extends Component {
 
                     </td>
                     <td>{stocks.investors_notes}</td>
+                    <td></td>
                   </tr>
                 )}
               </tbody>
