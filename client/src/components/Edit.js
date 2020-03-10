@@ -28,9 +28,9 @@ class Edit extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { ticker, name, close, short_description, earnings_date, high, low } = this.state.stocks;
-
-    axios.put('/api/stocks/'+this.props.match.params.id, { ticker, name, close, short_description, earnings_date, high, low })
+    const { ticker, name, close, investors_notes, short_description, earnings_date, high, low } = this.state.stocks;
+ 
+    axios.put('/api/stocks/'+this.props.match.params.id, { ticker, name, close, investors_notes, short_description, earnings_date, high, low })
       .then((result) => {
         this.props.history.push("/show/"+this.props.match.params.id)
       });
