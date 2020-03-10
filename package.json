@@ -10,6 +10,7 @@
     "axios": "^0.19.2",
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
+    "chart.js": "^2.9.3",
     "concurrently": "^5.1.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.2",
@@ -17,10 +18,14 @@
     "nodemon": "^2.0.2",
     "react": "^16.13.0",
     "react-bootstrap": "^1.0.0-beta.17",
+    "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.13.0",
+    "react-google-charts": "^3.0.15",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
-    "serve-favicon": "^2.5.0"
+    "react-table": "^7.0.0-rc.16",
+    "serve-favicon": "^2.5.0",
+    "zingchart-react": "^2.1.0"
   },
   "scripts": {
     "pretest": "eslint --ignore-path .gitignore .",

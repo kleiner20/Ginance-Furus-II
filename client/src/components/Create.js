@@ -149,7 +149,7 @@ console.log("company search 2")
       console.log((res.data))
       let monthsObject = res.data["Monthly Adjusted Time Series"]
 
-      console.log(monthsObject)
+      console.log(monthsObject, "Months")
 
       // for(let month in monthsObject){
       //   console.log(month)
@@ -172,6 +172,12 @@ console.log("company search 2")
           low = monthsObject[date]["3. low"]
         }
       })
+
+      // let closePriceArray = []
+
+      // for(let i = 0; i < 12; i++) {
+      //   closePriceArray.push(monthsObject[keysArr[0]]["4. close"])
+      // }
 
       let close = monthsObject[keysArr[0]]["4. close"]
       console.log('close', close)
@@ -239,7 +245,7 @@ console.log("company search 2")
               </div>
               <div class="form-group">
                 <label for="investors_notes">Investors Notes:</label>
-                <textArea class="form-control" name="investors_notes" onChange={this.onChange} placeholder="investors_notes" cols="80" rows="3">{investors_notes}</textArea>
+                <textArea class="form-control" name="investors_notes" onChange={this.onChange} placeholder="Sell when..." cols="80" rows="3">{investors_notes}</textArea>
               </div>
               <div class="form-group">
                 <label for="short_description">Short Description:</label>
