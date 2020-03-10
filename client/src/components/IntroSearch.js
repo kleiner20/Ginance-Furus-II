@@ -228,6 +228,8 @@ console.log("company search 2")
                       <StockCard 
                         ticker={stock.ticker}
                         name={stock.name}
+                        high= {stock.high}
+                        low={stock.low}
                         
                       />
                   )}
