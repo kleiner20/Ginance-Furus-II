@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import ZingChart from 'zingchart-react';
 // import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Heading from './components/Heading.js';
 // import Jumbotron from './components/Jumbotron.js';
 import axios from 'axios';

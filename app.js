@@ -4,10 +4,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost/mern-crud', { promiseLibrary: require('bluebird') })
-  .then(() =>  console.log('connection succesful'))
-  .catch((err) => console.error(err));
 
 var stocks = require('./routes/stocks');
 var app = express();
@@ -18,6 +14,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 app.use(express.static(path.join(__dirname, 'build')));
 
+mongoose.Promise = require('bluebird');
+mongoose.connect('mongodb://localhost/mern-crud', { promiseLibrary: require('bluebird'),useNewUrlParser: true,useUnifiedTopology: true })
+  .then(() =>  console.log('connection succesful'))
+  .catch((err) => console.error(err));
 app.use('/api/stocks', stocks);
 
 // catch 404 and forward to error handler

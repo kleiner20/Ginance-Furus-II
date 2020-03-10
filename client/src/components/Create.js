@@ -236,11 +236,11 @@ console.log("company search 2")
                 <input type="text" class="form-control" name="ticker" value={ticker} onChange={this.onChange} placeholder="ticker" />
               </div> */}
               <div class="form-group">
-                <label for="name">name:</label>
+                <label for="name">Name:</label>
                 <input type="text" class="form-control" name="name" value={name} onChange={this.onChange} placeholder="name" />
               </div>
               <div class="form-group">
-                <label for="close">close:</label>
+                <label for="close">Close:</label>
                 <input type="text" class="form-control" name="close" value={close} onChange={this.onChange} placeholder="close" />
               </div>
               <div class="form-group">
