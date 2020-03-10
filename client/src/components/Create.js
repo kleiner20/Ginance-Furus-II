@@ -149,7 +149,7 @@ console.log("company search 2")
       console.log((res.data))
       let monthsObject = res.data["Monthly Adjusted Time Series"]
 
-      console.log(monthsObject)
+      console.log(monthsObject, "Months")
 
       // for(let month in monthsObject){
       //   console.log(month)
@@ -172,6 +172,12 @@ console.log("company search 2")
           low = monthsObject[date]["3. low"]
         }
       })
+
+      // let closePriceArray = []
+
+      // for(let i = 0; i < 12; i++) {
+      //   closePriceArray.push(monthsObject[keysArr[0]]["4. close"])
+      // }
 
       let close = monthsObject[keysArr[0]]["4. close"]
       console.log('close', close)

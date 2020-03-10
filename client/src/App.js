@@ -6,7 +6,7 @@ import Heading from './components/Heading.js';
 // import Jumbotron from './components/Jumbotron.js';
 import axios from 'axios';
 import Chart from './components/Chart.js';
-// import TableRow from './components/TableRow.js';
+import TableRow from './components/TableRow.js';
 
 
 class App extends Component {
@@ -83,25 +83,25 @@ class App extends Component {
                   <th>Ticker</th>
                   <th>Buy/Sell Meter</th>
                   <th>Chart</th>
-                  <th>Notes 2</th>
+                  {/* <th>Notes 2</th> */}
                 </tr>
               </thead>
               <tbody>
-                {this.state.stocks.map(stocks =>
+                {this.state.stocks.map(stock =>
                   <tr>
-                    <td><Link to={`/show/${stocks._id}`}>{stocks.ticker}</Link></td>
+                    <td><Link to={`/show/${stock._id}`}>{stock.ticker}</Link></td>
 
-{/* <TableRow stocks={stocks} /> */}
+
                     <td>
                       {/* Low: ${stocks.low}<br></br>
                         Close ${stocks.close}<br></br>
                         High ${stocks.high}<br></br> */}
-  <div class="progress">
+  {/* <div class="progress">
   <div class={this.state.meter_color} role="progressbar" aria-valuenow={this.state.meter_value} aria-valuemin="0" aria-valuemax="100" style={{width: this.state.meter_progress}}>
       ${stocks.close}
-    </div></div>
+    </div></div> */}
 
-
+                     <TableRow stock={stock} key={stock._id}/>
 
 
     {/* <div class="progress">
@@ -112,13 +112,13 @@ class App extends Component {
 
 
 
-<div>{stocks.investors_notes}</div>
-    <button onClick={() => console.log(this.state)} >Color button</button>
-    <button onClick={() => this.addColorToMeter(stocks.low, stocks.close, stocks.high)} > KFC</button>
+<div>{stock.investors_notes}</div>
+    
+    
 
                     </td>
-                    <td><div><Chart /></div></td>
-      <td>{stocks.investors_notes}</td>
+                    <td><div><Chart stock={stock} /></div></td>
+      {/* <td>{stock.investors_notes}</td> */}
                   </tr>
                 )}
               </tbody>

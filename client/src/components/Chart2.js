@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import "./style.css";
 import {Line} from 'react-chartjs-2';
+import Chart from "react-google-charts";
 
-
-class Gchart extends Component{
+class Chart extends Component{
     constructor(props){
         super(props);
         this.state = {
@@ -12,7 +12,7 @@ class Gchart extends Component{
                 datasets:[
                     {
                     label:'Price',
-                    data:[
+                    data:{[
                         100,
                         200,
                         225,
@@ -47,7 +47,7 @@ class Gchart extends Component{
     }
 }
 
-export default Gchart;
+export default Chart;
 
 
 // function ChartForm(props, companies) {
