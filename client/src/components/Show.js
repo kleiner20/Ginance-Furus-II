@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import API from '../utils/API';
 
 class Show extends Component {
 
@@ -11,13 +12,16 @@ class Show extends Component {
     };
   }
 
+
   componentDidMount() {
     axios.get('/api/stocks/'+this.props.match.params.id)
       .then(res => {
         this.setState({ stocks: res.data });
         console.log(this.state.stocks);
       });
-  }
+  
+    
+    }
 
   delete(id){
     console.log(id);
@@ -39,7 +43,7 @@ class Show extends Component {
           <div class="panel-body">
             <h4><Link to="/"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Portfolio</Link></h4>
             <dl>
-              <dt>Tickers:</dt>
+              <dt>Ticker:</dt>
               <dd>{this.state.stocks.ticker}</dd>
               <dt>Name:</dt>
               <dd>{this.state.stocks.name}</dd>
