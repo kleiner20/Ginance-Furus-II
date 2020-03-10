@@ -69,6 +69,7 @@ class Create extends Component {
     // } else {
     //   this.searchSymbols();
     // }
+    this.stockPriceSearch(this.props.searchterm)
   }
 
   handleInputChange = event => {
