@@ -45,7 +45,7 @@ code {
 }
 
 .container{
-  background-color: black;
+  background-color:  #427a42;
 }
 
 
@@ -73,11 +73,31 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-  background-color: #111;
+  background-color: rgb(126, 115, 115);
 }
 
 
 h3{
   font-family: 'domoaregatonormal';
 
+}
+
+img{
+  height: 150px;
+}
+img.helmetImg{
+  position: absolute;
+  right: 20%;
+  top: 5%;
+}
+
+.panel-heading{
+  position: relative;
+}
+
+img.logoImg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
 }
