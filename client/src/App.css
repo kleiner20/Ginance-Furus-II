@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+.table {
+    table-layout: fixed;
+    width: 100%;  
+}
+td {
+width: auto;
+
+
+}

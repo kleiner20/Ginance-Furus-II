@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Card, Button} from "react-bootstrap";
 import CoSymForm from "./CoSymForm";
 import API from "../utils/API.js";
+import '../index.css';
+import Logo from "../assets/ginanfurtrans.png";
 
 
 
@@ -205,11 +207,12 @@ console.log("company search 2")
         
       <div class="container">
         <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">
-              My Portfolio
-            </h3>
-          </div>
+          <div className="panel-heading">
+              {/* <h3 className="panel-title"> */}
+              <img src={Logo} className="logoImg"/>
+            {/* </h3> */}
+            {/* <img src={Helmet} className="helmetImg"/> */}
+            </div>  
           <div class="panel-body">
             <h4><Link to="/create"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Stock</Link></h4>
             <CoSymForm searchtype={this.state.searchtype}
@@ -220,40 +223,25 @@ console.log("company search 2")
               selectedOption= {this.state.selectedOption}
               onChange = {this.onChange}
               />
-          </div>
-        </div>
-      </div>
-                <div className="cardsDiv" style={{display:"flex", padding: "20px"}}>
+          </div>    
+          <div className="cardsDiv" style={{display:"flex", justifyContent: "center", flexWrap: "wrap", padding: "20px"}}>
                   {this.state.stocks.map(stock =>
                       <StockCard 
+                        id={stock._id}
                         ticker={stock.ticker}
                         name={stock.name}
                         high= {stock.high}
                         low={stock.low}
-                        
+                        close={stock.close}
                       />
                   )}
-                </div>
+            </div>
+        </div>
+      </div>
+    
       </div>
     );
   }
 }
 
 export default IntroSearch;
-
-// <tr>
-                  //   <td><Link to={`/show/${stocks._id}`}>{stocks.ticker}</Link></td>
-
-                  //   <td>
-                  //     {/* Low: ${stocks.low}<br></br>
-                  //       Close ${stocks.close}<br></br>
-                  //       High ${stocks.high}<br></br> */}
-                  // <div class="progress">
-                  //   <div class={this.state.stock_status} role="progressbar" aria-valuenow={stocks.close} aria-valuemin={stocks.low} aria-valuemax={stocks.high} style={this.state.meter_percentage}>
-                  //     ${stocks.close}
-                  //   </div></div>
-
-
-                  //   </td>
-                  //   <td>{stocks.investors_notes}</td>
-                  // </tr>

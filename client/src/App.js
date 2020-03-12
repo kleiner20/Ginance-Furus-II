@@ -4,6 +4,8 @@ import Create from './components/Create';
 import Show from './components/Show';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import IntroSearch from './components/IntroSearch';
+// import './index.css';
+
 
 
 
@@ -31,22 +33,4 @@ searchUpdate = (term)=>{
     )
   }
 }
-
 export default App;
-
-// <tr>
-                  //   <td><Link to={`/show/${stocks._id}`}>{stocks.ticker}</Link></td>
-
-                  //   <td>
-                  //     {/* Low: ${stocks.low}<br></br>
-                  //       Close ${stocks.close}<br></br>
-                  //       High ${stocks.high}<br></br> */}
-                  // <div class="progress">
-                  //   <div class={this.state.stock_status} role="progressbar" aria-valuenow={stocks.close} aria-valuemin={stocks.low} aria-valuemax={stocks.high} style={this.state.meter_percentage}>
-                  //     ${stocks.close}
-                  //   </div></div>
-
-
-                  //   </td>
-                  //   <td>{stocks.investors_notes}</td>
-                  // </tr>

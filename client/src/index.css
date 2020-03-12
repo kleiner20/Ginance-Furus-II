@@ -1,39 +1,76 @@
 @import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
-
+@font-face {
+  font-family: 'domoaregatonormal';
+  src: url('./samuraiFont/domoaregatonormal-q2jr-webfont.woff2') format('woff2'),
+       url('./samuraiFont/domoaregatonormal-q2jr-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   margin: 0;
   font-size: 1.5em;
-  background-color: #427a42
+  background-color: #427A42
   ;
   font-family: 'Spartan', ;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 a{
   text-decoration: none;
 }
-
 a:hover{
   color:gray;
   text-decoration: none;
 }
-
 .panel-title{
   text-align: center;
   padding:30px;
   font-size:4em;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 .navbar-brand{
   font-size:1.5em;
 }
-
 .container{
-  background-color: #427a42;
+  background-color:  #427A42;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  margin-bottom:50px;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: rgb(126, 115, 115);
+}
+h3{
+  font-family: 'domoaregatonormal';
+}
+img{
+  height: 150px;
+}
+.panel-heading{
+  position: relative;
+}
+img.logoImg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
 }
