@@ -10,6 +10,8 @@ import Chart from './components/Chart.js';
 import TableRow from './components/TableRow.js';
 // import './App.css';
 import './index.css';
+import Helmet from "./assets/helmet.png";
+import Logo from "./assets/ginanfurtrans.png";
 
 
 class App extends Component {
@@ -71,12 +73,14 @@ class App extends Component {
     return (
       <div>
         <Heading />
-        <div class="container">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                My Portfolio
-            </h3>
+        <div className="container">
+          <div className="panel panel-default">
+            <div className="panel-heading">
+              {/* <h3 className="panel-title"> */}
+              <img src={Logo} className="logoImg"/>
+
+            {/* </h3> */}
+            {/* <img src={Helmet} className="helmetImg"/> */}
             </div>
             <div class="panel-body">
               <h4><Link to="/create"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add Stock</Link></h4>
