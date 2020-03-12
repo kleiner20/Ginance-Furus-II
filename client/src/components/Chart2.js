@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import "./style.css";
+// import "./style.css";
 import {Line} from 'react-chartjs-2';
 import Chart from "react-google-charts";
 
