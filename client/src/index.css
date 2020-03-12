@@ -61,6 +61,7 @@ li a:hover {
 }
 h3{
   font-family: 'domoaregatonormal';
+
 }
 img{
   height: 150px;
@@ -68,9 +69,12 @@ img{
 .panel-heading{
   position: relative;
 }
+
 img.logoImg{
   display: block;
   margin-left: auto;
   margin-right: auto;
   height: 200px;
+
 }
+
