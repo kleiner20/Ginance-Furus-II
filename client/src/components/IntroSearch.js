@@ -52,17 +52,17 @@ class IntroSearch extends Component {
     event.preventDefault();
     console.log("Keith's tracking 2 too")
 
-    if(this.state.selectedOption === "symbol"){
+    // if(this.state.selectedOption === "symbol"){
 
-      this.stockPriceSearch(this.state.ticker)
-    } 
-    else {
+    //   this.stockPriceSearch(this.state.ticker)
+    // } 
+    // else {
       API.getCompanySymbols(this.state.ticker).then(res=>{
         console.log(res)
         let symbol = res.data.companies[0].ticker;
         this.stockPriceSearch(symbol)
       })
-    }
+    // }
 
     // .then(res =>{
     //   console.log(res.data)

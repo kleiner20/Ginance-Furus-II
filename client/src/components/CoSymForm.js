@@ -23,7 +23,7 @@ function CoSymForm(props, companies) {
             id="search"
           />
           <br />
-          <div className="form-group" style={{ padding: '22px' }}>      
+          {/* <div className="form-group" style={{ padding: '22px' }}>      
         <label>
           <input type = "radio"  name="selectedOption" value="symbol" checked = {props.selectedOption === 'symbol'} onClick={props.onChange}/>
             Search Symbol
@@ -32,7 +32,7 @@ function CoSymForm(props, companies) {
           <input type = "radio" name="selectedOption" value="company_name" checked = {props.selectedOption === 'company_name'}onClick={props.onChange}/>
             Search Company Name
         </label>
-        </div>
+        </div> */}
           <button onClick={props.handleSymbolFormSubmit} className="btn btn-primary">
             Search
         </button>
