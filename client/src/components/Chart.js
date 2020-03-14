@@ -125,7 +125,11 @@ API.getStockPrices(symbol)
 
     render(){
         return (
+<<<<<<< HEAD
+            <div className="chart" style={{height:'200px', width:'250px'}} >
+=======
             <div className="chart" style={{height:'200px', width:'250px'}}>
+>>>>>>> 7e6d049501e248049d6f6c609d1bc767cca811a4
             <Line
                 data={this.state.chartData}
                 width={100}
