@@ -202,11 +202,12 @@ console.log("company search 2")
   
   render() {
     return (
+      <div className="back">
       <div>
         <Heading />
         
-      <div class="container">
-        <div class="panel panel-default">
+      <div className="container">
+        <div className="panel panel-default">
           <div className="panel-heading">
               {/* <h3 className="panel-title"> */}
               <img src={Logo} className="logoImg"/>
@@ -238,7 +239,7 @@ console.log("company search 2")
             </div>
         </div>
       </div>
-    
+    </div>
       </div>
     );
   }
