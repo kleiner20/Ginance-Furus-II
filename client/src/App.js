@@ -10,6 +10,7 @@ import Chart from './components/Chart.js';
 import TableRow from './components/TableRow.js';
 // import './App.css';
 import './index.css';
+require('dotenv').config();
 
 
 class App extends Component {
