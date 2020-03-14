@@ -20,6 +20,9 @@ This project uses the following technologies
 - [React.js](https://reactjs.org) for client, [Morgan][bluebird]
 - [Node.js](https://nodejs.org/en/) for server
 - [Create React App](https://github.com/facebook/create-react-app) for bootstrapping client
+- HTML
+- CSS
+- Javascript
 
 ### Progress
 
@@ -55,10 +58,10 @@ npm start
 
 ## Issues and Future Development
 
-- [x] Sometimes the charts wont pull up.
+- [x] APIs show unreliability. Work on how to get them to be more consistent
 - [x] Sometimes the ticker doesn't display correctly.
 
 - [x] Adding a financial news within a news tab.
 - [x] Add an RSS feed to view.
-- [x] Add a chat box.
+- [x] Add a user authentication
 
