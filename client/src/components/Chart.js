@@ -14,7 +14,7 @@ class Chart extends Component{
                     {
                     label:'Price',
                     data:[],
-                    backgroundColor: '#fff',
+                    backgroundColor: '#0a0a0a',
                     }]
                 }
             }
@@ -125,7 +125,7 @@ API.getStockPrices(symbol)
 
     render(){
         return (
-            <div className="chart" >
+            <div className="chart" style={{height:'200px', width:'250px'}} >
             <Line
                 data={this.state.chartData}
                 width={300}

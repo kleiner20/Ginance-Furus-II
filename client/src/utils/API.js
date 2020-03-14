@@ -7,7 +7,7 @@ export default {
     return axios.get(BASEURL);
   },
   getStockPrices: function(symbol){
-    return axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=${symbol}&apikey=OmE3MWIyM2I4Y2E4ZTg1YTU1NTdmZjlmZDllNmJlNzdh`)
+    return axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=${symbol}&apikey=CRYHQM0N0MNLSSX1`)
   },
   //this one gives you ticker when you give it the full company name
   getCompanySymbols: function(companyName){
