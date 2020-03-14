@@ -3,7 +3,7 @@ import React from "react";
 
 function CoSymForm(props, companies) {
   return (
-    <div className="card text-center float">ls
+    <div className="card text-center float">
     
       <div className="card-header">
         <h2>Search by Company or Symbol </h2>

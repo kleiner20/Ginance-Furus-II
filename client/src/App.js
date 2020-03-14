@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-
+import Edit from './components/Edit';
+import Create from './components/Create';
+import Show from './components/Show';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import IntroSearch from './components/IntroSearch';
 // import ZingChart from 'zingchart-react';
 // import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
@@ -11,13 +15,9 @@ import Chart from './components/Chart.js';
 import TableRow from './components/TableRow.js';
 // import './App.css';
 import './index.css';
-require('dotenv').config();
+// require('dotenv').config();
 
-import Edit from './components/Edit';
-import Create from './components/Create';
-import Show from './components/Show';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import IntroSearch from './components/IntroSearch';
+
 
 
 
