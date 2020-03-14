@@ -52,17 +52,17 @@ class IntroSearch extends Component {
     event.preventDefault();
     console.log("Keith's tracking 2 too")
 
-    if(this.state.selectedOption === "symbol"){
+    // if(this.state.selectedOption === "symbol"){
 
-      this.stockPriceSearch(this.state.ticker)
-    } 
-    else {
+    //   this.stockPriceSearch(this.state.ticker)
+    // } 
+    // else {
       API.getCompanySymbols(this.state.ticker).then(res=>{
         console.log(res)
         let symbol = res.data.companies[0].ticker;
         this.stockPriceSearch(symbol)
       })
-    }
+    // }
 
     // .then(res =>{
     //   console.log(res.data)
@@ -202,11 +202,12 @@ console.log("company search 2")
   
   render() {
     return (
+      <div className="back">
       <div>
         <Heading />
         
-      <div class="container">
-        <div class="panel panel-default">
+      <div className="container">
+        <div className="panel panel-default">
           <div className="panel-heading">
               {/* <h3 className="panel-title"> */}
               <img src={Logo} className="logoImg"/>
@@ -238,7 +239,7 @@ console.log("company search 2")
             </div>
         </div>
       </div>
-    
+    </div>
       </div>
     );
   }
