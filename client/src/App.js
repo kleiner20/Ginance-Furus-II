@@ -1,10 +1,24 @@
 import React, { Component } from 'react';
+
+// import ZingChart from 'zingchart-react';
+// import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import Heading from './components/Heading.js';
+// import Jumbotron from './components/Jumbotron.js';
+import axios from 'axios';
+import Chart from './components/Chart.js';
+import TableRow from './components/TableRow.js';
+// import './App.css';
+import './index.css';
+require('dotenv').config();
+
 import Edit from './components/Edit';
 import Create from './components/Create';
 import Show from './components/Show';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import IntroSearch from './components/IntroSearch';
-// import './index.css';
+
 
 
 
