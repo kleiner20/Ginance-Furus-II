@@ -1,6 +1,5 @@
 import React from "react";
 // import 'bootstrap/dist/css/bootstrap.min.css';
-
 import {Button, Navbar, Nav, NavDropdown, Form, FormControl} from "react-bootstrap";
 function Heading(props){
   return(
@@ -12,5 +11,4 @@ function Heading(props){
 </ul>
   )
 }
-
 export default Heading;

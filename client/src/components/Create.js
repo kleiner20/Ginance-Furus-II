@@ -26,7 +26,7 @@ class Create extends Component {
       low: null,
       stock_status: '',
       meter_percentage: '',
-      selectedOption: 'symbol'
+      selectedOption: ''
     };
   }
   onChange = (e) => {
@@ -69,6 +69,7 @@ class Create extends Component {
     // } else {
     //   this.searchSymbols();
     // }
+    if(this.props.searchterm) this.stockPriceSearch(this.props.searchterm)
   }
 
   handleInputChange = event => {
@@ -94,17 +95,18 @@ class Create extends Component {
     event.preventDefault();
     console.log("Keith's tracking 2 too")
 
-    if(this.state.selectedOption === "symbol"){
+    // if(this.state.selectedOption === "symbol"){
 
-      this.stockPriceSearch(this.state.ticker)
-    } 
-    else {
+    //   this.stockPriceSearch(this.state.ticker)
+    // } 
+    // else {
       API.getCompanySymbols(this.state.ticker).then(res=>{
         console.log(res)
         let symbol = res.data.companies[0].ticker;
+        console.log("SYMBOL: ", symbol)
         this.stockPriceSearch(symbol)
       })
-    }
+    //}
 
     // .then(res =>{
     //   console.log(res.data)
@@ -189,7 +191,8 @@ console.log("company search 2")
             low: low,
             close: close,
             short_description: info.data.short_description,
-            name: info.data.legal_name
+            name: info.data.legal_name,
+            ticker: info.data.ticker
           });
       })
     })
@@ -197,7 +200,7 @@ console.log("company search 2")
       console.log(err)
       //do something to let the user know its not a real stock symbol
       //have an error message in the state
-      alert("Not a real stock symbol")
+      alert("Sorry, we could not find that company or stock symbol. Try another!")
     })
   }
 
